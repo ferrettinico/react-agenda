@@ -160,7 +160,7 @@ var DragDropTouch;
                 // raise double-click and prevent zooming
                 if (Date.now() - this._lastClick < DragDropTouch._DBLCLICK) {
                     if (this._dispatchEvent(e, 'dblclick', e.target)) {
-                        e.preventDefault();
+                        //e.preventDefault();
                         this._reset();
                         return;
                     }
@@ -196,7 +196,7 @@ var DragDropTouch;
                 var target = this._getTarget(e);
                 if (this._dispatchEvent(e, 'mousemove', target)) {
                     this._lastTouch = e;
-                    e.preventDefault();
+                    //e.preventDefault();
                     return;
                 }
                 // start dragging
@@ -226,7 +226,7 @@ var DragDropTouch;
             if (this._shouldHandle(e)) {
                 // see if target wants to handle up
                 if (this._dispatchEvent(this._lastTouch, 'mouseup', e.target)) {
-                    e.preventDefault();
+                    //e.preventDefault();
                     return;
                 }
                 // user clicked the element but didn't drag, so clear the source and simulate a click
