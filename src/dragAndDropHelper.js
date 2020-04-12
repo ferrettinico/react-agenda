@@ -211,7 +211,7 @@ var DragDropTouch;
                 // continue dragging
                 if (this._img) {
                     this._lastTouch = e;
-                    e.preventDefault(); // prevent scrolling
+                    //e.preventDefault(); // prevent scrolling
                     if (target != this._lastTarget) {
                         this._dispatchEvent(this._lastTouch, 'dragleave', this._lastTarget);
                         this._dispatchEvent(e, 'dragenter', target);
